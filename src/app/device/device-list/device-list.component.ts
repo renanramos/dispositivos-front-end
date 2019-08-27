@@ -9,7 +9,7 @@ import { Device } from '../shared/device';
 })
 export class DeviceListComponent implements OnInit {
 
-  devices: Device[] = [];
+  devices: any[];
 
   constructor(private deviceService: DeviceService) { }
 
@@ -19,7 +19,9 @@ export class DeviceListComponent implements OnInit {
 
 
   loadDevices() {
-    this.deviceService.getAllDevices();
+    this.deviceService.getAllDevices().subscribe((data: any) => {      
+      this.devices = data;
+    });
   }
 
   
