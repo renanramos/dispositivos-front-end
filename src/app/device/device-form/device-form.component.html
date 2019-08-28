@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <form [formGroup]="deviceForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="col-xl-6">
+                        <input type="hidden" formControlName="id" />
+                        <div class="form-group">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" class="form-control" id="modelo" placeholder="Modelo"
+                                formControlName="modelo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fabricante">Fabricante</label>
+                            <input type="text" class="form-control" id="fabricante" placeholder="Fabricante"
+                                formControlName="fabricante" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="capacidadeArmazenamento">Capacidade de Armazenamento</label>
+                            <input type="number" class="form-control" id="capacidadeArmazenamento"
+                                placeholder="Capacidade de Armazenamento" formControlName="capacidadeArmazenamento"  required>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="form-group">
+                            <label for="tamanhoTela">Tamanho da tela</label>
+                            <input type="number" class="form-control" id="tamanhoTela" placeholder="Tamanho da tela"
+                                formControlName="tamanhoTela" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="versaoSO">Versão do Sistema Operacional</label>
+                            <input type="text" class="form-control" id="versaoSO"
+                                placeholder="Versão do Sistema Operacional" formControlName="versaoSO" required>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="modalFormInvalido">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

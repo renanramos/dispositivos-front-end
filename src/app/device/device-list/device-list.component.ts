@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DeviceService } from '../device.service';
-import { Device } from '../shared/device';
+import { DeviceApiService } from '../device-api.service';
 
 @Component({
   selector: 'app-device-list',
@@ -11,14 +10,13 @@ export class DeviceListComponent implements OnInit {
 
   devices: any[];
 
-  constructor(private deviceService: DeviceService) { }
+  constructor(private deviceService: DeviceApiService) { }
 
   ngOnInit() {
     this.loadDevices();
   }
 
-
-  loadDevices() {
+  loadDevices() {    
     this.deviceService.getAllDevices().subscribe((data: any) => {      
       this.devices = data;
     });

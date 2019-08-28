@@ -2,6 +2,20 @@ table tbody{
     font-size: 14px;
 }
 
+table td:last-child, th:last-child{
+    text-align: center;
+}
+
 .actions{
     display: inline;
+}
+
+.actions i {
+    font-size: 14px;
+    padding: 2px 20px;
+}
+
+.actions i:hover{
+    cursor: pointer;
+    color: blue;
 }

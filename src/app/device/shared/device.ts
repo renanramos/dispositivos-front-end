@@ -1,9 +1,9 @@
 export class Device {
 
-    private id: number;
-    private modelo: string;
-    private fabricante: string;
-    private capacidadeArmazenamento: string;
-    private tamanhoTela: number;
-    private versaoSO: string;
+    public id: number;
+    public device_modelo: string;
+    public device_fabricante: string;
+    public device_capacidade_armazenamento: string;
+    public device_tamanho_tela: number;
+    public device_versao_so: string;
 }
