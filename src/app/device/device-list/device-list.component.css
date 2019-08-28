@@ -6,6 +6,14 @@ table td:last-child, th:last-child{
     text-align: center;
 }
 
+table tr i {
+    visibility: hidden;
+}
+
+table tr:hover i{
+    visibility: unset;
+}
+
 .actions{
     display: inline;
 }

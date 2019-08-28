@@ -22,7 +22,7 @@ export class DeviceFormComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.deviceFormInit();
+    this.deviceFormInit();   
   }
 
   /**
@@ -46,7 +46,7 @@ export class DeviceFormComponent implements OnInit {
   onSubmit() {
 
     if (this.validaForm()){
-      $('#modalFormInvalido').modal('open');
+      $('#modalFormInvalido').modal('show');      
       return; 
     } else {
       
