@@ -4,7 +4,8 @@
       <input type="text" class="form-control" placeholder="Modelo" aria-label="Modelo do dispositivo"
         aria-describedby="basic-addon2" id="searchModelo" [(ngModel)]="searchModelo">
       <div class="input-group-append">
-        <button class="btn btn-primary" type="button" (click)="pesquisarModelo();" [disabled]="searchModelo.length == 0">Pesquisar</button>
+        <button class="btn btn-primary" type="button" (click)="pesquisarModelo();"
+          [disabled]="searchModelo.length == 0">Pesquisar</button>
       </div>
     </div>
     <div class="alert alert-warning" role="alert" *ngIf="showAlert" id="alertaFiltro">
@@ -81,16 +82,14 @@
         <p>
           Tem certeza que deseja excluir este dispositivo?
         </p>
-        <p>
-          <strong>
-            <div *ngIf="device">
-              {{ device.device_modelo }}
-            </div>
-          </strong>
-        </p>
+        <div *ngIf="device">
+          <p>
+            {{ device.device_modelo }} - {{ device.device_fabricante }}
+          </p>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
         <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="excluirDispositivo(device);">Sim,
           excluir!</button>
       </div>
@@ -114,8 +113,8 @@
         </p>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-        </div>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
+      </div>
     </div>
   </div>
 </div>
