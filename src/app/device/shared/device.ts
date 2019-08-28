@@ -1,6 +1,6 @@
 export class Device {
 
-    public id: number;
+    public device_id: number;
     public device_modelo: string;
     public device_fabricante: string;
     public device_capacidade_armazenamento: string;

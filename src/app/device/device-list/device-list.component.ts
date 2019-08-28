@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DeviceApiService } from '../device-api.service';
+import { Device } from '../shared/device';
 
 @Component({
   selector: 'app-device-list',
@@ -22,6 +23,13 @@ export class DeviceListComponent implements OnInit {
     });
   }
 
+  excluiDispositivo(device: Device) {
+    this.deviceService.deleteDevice(device).subscribe((response: any) => {
+      if (response.status === 200){
+        this.loadDevices();
+      }
+    });
+  }
   
 
 }

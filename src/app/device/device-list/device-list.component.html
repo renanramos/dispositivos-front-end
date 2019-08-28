@@ -26,7 +26,7 @@
               <div class="actions">
                   <i class="far fa-folder-open" title="Visualizar {{ device.device_modelo }}"></i>
                   <i class="far fa-edit" title="Alterar {{ device.device_modelo }}"></i>
-                  <i class="fas fa-trash-alt" title="Excluir {{ device.device_modelo }}"></i>
+                  <i class="fas fa-trash-alt" title="Excluir {{ device.device_modelo }}" (click)="excluiDispositivo(device);"></i>
               </div>
             </td>
           </tr>

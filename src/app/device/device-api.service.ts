@@ -20,4 +20,7 @@ export class DeviceApiService {
       return this.http.post<Device>(this.baseURL, device);
   }
 
+  deleteDevice(device: Device) {
+     return this.http.delete<Device>(this.baseURL+`/${device.device_id}`);
+  }
 }

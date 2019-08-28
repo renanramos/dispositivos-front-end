@@ -47,7 +47,7 @@ export class DeviceFormComponent implements OnInit {
       return; 
     } else {
       let device: Device = {
-        id: this.d.id.value,
+        device_id: this.d.id.value,
         device_modelo: this.d.modelo.value,
         device_fabricante: this.d.fabricante.value,
         device_capacidade_armazenamento: this.d.capacidadeArmazenamento.value,
