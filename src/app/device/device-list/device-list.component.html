@@ -1,5 +1,12 @@
 <div class="container-fluid">
-  <!-- <app-device-form></app-device-form> -->
+  <div class="form-row">
+    <div class="col-xl-12">
+      <div class="form-group">
+        <label for="searchDevice">Pesquisa</label>
+        <input type="text" id="searchDevice" class="form-control" placeholder="Pesquisa" >
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-xl-12">
       <table class="table table-hover">
@@ -24,9 +31,10 @@
             <td>{{ device.device_versao_so }}</td>
             <td>
               <div class="actions">
-                  <i class="far fa-folder-open" title="Visualizar {{ device.device_modelo }}"></i>
-                  <i class="far fa-edit" title="Alterar {{ device.device_modelo }}"></i>
-                  <i class="fas fa-trash-alt" title="Excluir {{ device.device_modelo }}" (click)="excluiDispositivo(device);"></i>
+                <i class="far fa-folder-open" title="Visualizar {{ device.device_modelo }}"></i>
+                <i class="far fa-edit" title="Alterar {{ device.device_modelo }}"></i>
+                <i class="fas fa-trash-alt" title="Excluir {{ device.device_modelo }}"
+                  (click)="excluiDispositivo(device);"></i>
               </div>
             </td>
           </tr>

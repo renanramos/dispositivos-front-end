@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Device } from '../shared/device';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DeviceApiService } from '../device-api.service';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
+declare var $: any;
 
 @Component({
   selector: 'app-device-form',
@@ -44,8 +46,10 @@ export class DeviceFormComponent implements OnInit {
   onSubmit() {
 
     if (this.validaForm()){
+      $('#modalFormInvalido').modal('open');
       return; 
     } else {
+      
       let device: Device = {
         device_id: this.d.id.value,
         device_modelo: this.d.modelo.value,
