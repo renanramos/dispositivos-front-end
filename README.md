@@ -28,3 +28,6 @@ Abra a pasta do projeto através do `cmd` ou pela `IDE` e instale as dependênci
 Depois de instaladas as dependências, execute o projeto com `npm start`. Após a inicialização, o server irá ativar um 
 serviço em **localhost:4200** . 
 
+## Tela inicial
+
+![Tela inicial!](/img/tela-inicial.png "Tela inicial")
