@@ -2,7 +2,7 @@
 
 Aplicação front-end desenvolvida para gerenciamento de dispositivos móveis (celulares) desenvolvido em Angular.
 
-> Importante: para que a aplicação funcione corretamente, certifique-se de ter configurado o serviço [back-end](https://github.com/renanramos/dispositivos-back-end/blob/master/README.md) para o correto funcionamento.
+> Importante: para que a aplicação funcione corretamente, certifique-se de ter configurado o serviço [back-end](https://github.com/renanramos/dispositivos-back-end/blob/master/README.md).
 
 ## Ferramentas utilizadas
 
