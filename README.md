@@ -1,27 +1,30 @@
-# Frontend
+# Dispositivos (front-end)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
+Aplicação front-end desenvolvida para gerenciamento de dispositivos móveis (celulares) desenvolvido em Angular.
 
-## Development server
+> Importante: para que a aplicação funcione corretamente, certifique-se de ter configurado o serviço [back-end](https://github.com/renanramos/dispositivos-back-end/blob/master/README.md) para o correto funcionamento.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Ferramentas utilizadas
 
-## Code scaffolding
+* Angular CLI 8.3.0
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuração e instalação
 
-## Build
+#### Configurando a aplicação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Acesse uma pasta de seu diretório de preferência e execute os comandos abaixo:
 
-## Running unit tests
+**Clone do projeto**
+```
+git clone https://github.com/renanramos/dispositivos-front-end.git
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Instalação dos pacotes**
 
-## Running end-to-end tests
+Abra a pasta do projeto através do `cmd` ou pela `IDE` e instale as dependências:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```npm i ``` ou ```npm install```.
 
-## Further help
+Depois de instaladas as dependências, execute o projeto com `npm start`. Após a inicialização, o server irá ativar um 
+serviço em **localhost:4200** . 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
