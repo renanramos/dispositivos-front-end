@@ -20,7 +20,15 @@ export class DeviceApiService {
       return this.http.post<Device>(this.baseURL, device);
   }
 
+  updateDevie(device: Device) {
+    return this.http.put<Device>(this.baseURL, device);
+  }
+
   deleteDevice(device: Device) {
      return this.http.delete<Device>(this.baseURL+`/${device.device_id}`);
+  }
+
+  getByModelo(modelo: string){
+    return this.http.get<any>(this.baseURL+`/search?modelo=${modelo}`);
   }
 }
