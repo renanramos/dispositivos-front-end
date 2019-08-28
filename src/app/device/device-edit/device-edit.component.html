@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="form-row">
+                <div class="col-xl-6">
+                    <input type="hidden" [(ngModel)]="device_id" />
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" placeholder="Modelo"
+                            [(ngModel)]="device.device_modelo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="fabricante">Fabricante</label>
+                        <input type="text" class="form-control" id="fabricante" placeholder="Fabricante"
+                            [(ngModel)]="device.device_fabricante" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="capacidadeArmazenamento">Capacidade de Armazenamento</label>
+                        <input type="number" class="form-control" id="capacidadeArmazenamento"
+                            placeholder="Capacidade de Armazenamento"
+                            [(ngModel)]="device.device_capacidade_armazenamento" required>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="form-group">
+                        <label for="tamanhoTela">Tamanho da tela</label>
+                        <input type="number" class="form-control" id="tamanhoTela" placeholder="Tamanho da tela"
+                            [(ngModel)]="device.device_tamanho_tela" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="versaoSO">Versão do Sistema Operacional</label>
+                        <input type="text" class="form-control" id="versaoSO"
+                            placeholder="Versão do Sistema Operacional" [(ngModel)]="device.device_versao_so" required>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-success" data-dismiss="modal" aria-label="Close" (click)="atualizaDevice(device);">Salvar</button>
+            <button class="btn btn-primary" data-dismiss="modal" aria-label="Close" >Cancelar</button>
+        </div>
+    </div>
+</div>
