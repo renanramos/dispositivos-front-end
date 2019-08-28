@@ -7,6 +7,7 @@ Aplicação front-end desenvolvida para gerenciamento de dispositivos móveis (c
 ## Ferramentas utilizadas
 
 * Angular CLI 8.3.0
+* Bootstrap 4.3.1
 
 ## Configuração e instalação
 
