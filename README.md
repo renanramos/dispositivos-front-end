@@ -30,4 +30,4 @@ serviço em **localhost:4200** .
 
 ## Página principal
 
-![Tela inicial!](/img/tela-inicial.png "Tela inicial")
+![Página principal!](/img/tela-inicial.png "Página principal")
