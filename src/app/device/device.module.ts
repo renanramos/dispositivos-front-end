@@ -3,7 +3,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DeviceListComponent } from './device-list/device-list.component';
-import { DeviceEditComponent } from './device-edit/device-edit.component';
 import { DeviceFormComponent } from './device-form/device-form.component';
 
 const routes: Routes = [
@@ -11,7 +10,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DeviceListComponent, DeviceEditComponent, DeviceFormComponent],
+  declarations: [DeviceListComponent, DeviceFormComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
