@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Device } from './shared/device';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +13,15 @@ export class DeviceApiService {
 
   constructor(private http: HttpClient) { }
 
-  getAllDevices() {
-    return this.http.get(this.baseURL);
+  getAllDevices(): Observable<Device[] | Device> {
+    return this.http.get<Device[]>(this.baseURL);
   }
 
   createNewDevice(device: Device) {    
       return this.http.post<Device>(this.baseURL, device);
   }
 
-  updateDevie(device: Device) {
+  updateDevice(device: Device) {
     return this.http.put<Device>(this.baseURL, device);
   }
 
