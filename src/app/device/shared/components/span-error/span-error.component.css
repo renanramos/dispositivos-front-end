@@ -1,0 +1,6 @@
+.field-error {
+  font-weight: 500;
+  font-size: small;
+  color: #ff6363;
+  position: absolute;
+}
