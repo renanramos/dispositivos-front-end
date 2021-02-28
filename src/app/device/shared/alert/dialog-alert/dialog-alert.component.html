@@ -1,18 +1,15 @@
-<div class="modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-danger">Atenção!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Todos os campos devem ser preenchidos.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>
-            </div>
-        </div>
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" [ngClass]="{'text-danger': isDeleting}">Atenção!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeDialog();">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>{{ message }}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn" *ngIf="isDeleting" [ngClass]="{'btn-danger': isDeleting}" data-dismiss="modal" (click)="confirm();">Confirmar</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="closeDialog();">Fechar</button>
     </div>
 </div>
