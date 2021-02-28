@@ -1,0 +1,22 @@
+.modal-buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: .9em;
+}
+
+.modal-buttons > button {
+  width: calc(50% - 5px);
+  margin: 0px 2px;
+}
+
+.btn-light {
+  border-color: #adb5bd;
+}
+
+.form-control-invalid {
+  border-color: #ff4f3c !important;
+  box-shadow: 0 0 0 0.2rem rgb(255 0 0 / 25%) !important;
+}

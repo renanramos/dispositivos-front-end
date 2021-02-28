@@ -1,50 +1,58 @@
 <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" 
-            aria-label="Close" (click)="closeDialog();">
+  <h5 class="modal-title pull-left">{{ isUpdateOperation ? 'Editar' : 'Incluir' }} dispositivo</h5>
+  <button type="button" class="close pull-right" 
+    aria-label="Close" (click)="closeModal();">
   <span aria-hidden="true">&times;</span>
 </button>
 </div>
 <div class="modal-body">
-    <div class="container-fluid">
-        <div class="row">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12">
+        <form [formGroup]="deviceForm">
+          <div class="form-row">
             <div class="col-xl-12">
-                <form [formGroup]="deviceForm" (ngSubmit)="onSubmit()">
-                    <div class="form-row">
-                        <div class="col-xl-6">
-                            <input *ngIf="id" type="hidden" formControlName="id" />
-                            <div class="form-group">
-                                <label for="modelo">Modelo</label>
-                                <input type="text" class="form-control" id="modelo" placeholder="Modelo"
-                                    formControlName="modelo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="fabricante">Fabricante</label>
-                                <input type="text" class="form-control" id="fabricante" placeholder="Fabricante"
-                                    formControlName="fabricante" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="capacidadeArmazenamento">Capacidade de Armazenamento</label>
-                                <input type="number" class="form-control" id="capacidadeArmazenamento"
-                                    placeholder="Capacidade de Armazenamento" formControlName="capacidadeArmazenamento"  required>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="form-group">
-                                <label for="tamanhoTela">Tamanho da tela</label>
-                                <input type="number" class="form-control" id="tamanhoTela" placeholder="Tamanho da tela"
-                                    formControlName="tamanhoTela" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="versaoSO">Versão do Sistema Operacional</label>
-                                <input type="text" class="form-control" id="versaoSO"
-                                    placeholder="Versão do Sistema Operacional" formControlName="versaoSO" required>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-success" type="submit">Salvar</button>
-                </form>
+              <input *ngIf="id" type="hidden" formControlName="id" />
+              <div class="form-group">
+                <label for="modelo">Modelo</label>
+                <input type="text" class="form-control" [ngClass]="{'form-control-invalid': isFormSubmitted && modelo.invalid}" id="modelo" placeholder="Modelo"
+                    formControlName="modelo">
+                    <device-span-error [show]="isFormSubmitted" [control]="modelo"></device-span-error>
+              </div>
+              <div class="form-group">
+                <label for="fabricante">Fabricante</label>
+                <input type="text" class="form-control" id="fabricante" placeholder="Fabricante" [ngClass]="{'form-control-invalid': isFormSubmitted && fabricante.invalid}"
+                    formControlName="fabricante">
+                    <device-span-error [show]="isFormSubmitted" [control]="fabricante"></device-span-error>
+              </div>
+              <div class="form-group">
+                <label for="capacidadeArmazenamento">Capacidade de Armazenamento</label>
+                <input type="text" class="form-control" id="capacidadeArmazenamento" mask="0*" [ngClass]="{'form-control-invalid': isFormSubmitted && capacidadeArmazenamento.invalid}"
+                    placeholder="Capacidade de Armazenamento" formControlName="capacidadeArmazenamento">
+                    <device-span-error [show]="isFormSubmitted" [control]="capacidadeArmazenamento"></device-span-error>
+              </div>
             </div>
-        </div>
+            <div class="col-xl-12">
+              <div class="form-group">
+                <label for="tamanhoTela">Tamanho da tela</label>
+                <input type="text" class="form-control" id="tamanhoTela" placeholder="Tamanho da tela" mask="0*"
+                    [ngClass]="{'form-control-invalid': isFormSubmitted && tamanhoTela.invalid}" formControlName="tamanhoTela">
+                    <device-span-error [show]="isFormSubmitted" [control]="tamanhoTela"></device-span-error>
+              </div>
+              <div class="form-group">
+                <label for="versaoSO">Versão do Sistema Operacional</label>
+                <input type="text" class="form-control" id="versaoSO" [ngClass]="{'form-control-invalid': isFormSubmitted && versaoSO.invalid}"
+                    placeholder="Versão do Sistema Operacional" formControlName="versaoSO">
+                    <device-span-error [show]="isFormSubmitted" [control]="versaoSO"></device-span-error>
+              </div>
+            </div>
+          </div>
+          <div class="modal-buttons">
+            <button class="btn btn-light" (click)="closeModal();">Cancelar</button>
+            <button class="btn btn-success" (click)="onSubmit();">Salvar</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
