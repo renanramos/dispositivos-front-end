@@ -6,6 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class SearchService {
 	searchValue: Subject<string> = new Subject<string>();
+	clearSearchField: Subject<string> = new Subject<string>();
 
 	constructor() {}
 
@@ -15,5 +16,13 @@ export class SearchService {
 
 	getSearchTypedValue() {
 		return this.searchValue.asObservable();
+	}
+
+	getSearchCleared() {
+		return this.clearSearchField.asObservable();
+	}
+
+	clearField() {
+		this.clearSearchField.next('');
 	}
 }

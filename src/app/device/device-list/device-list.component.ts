@@ -124,7 +124,10 @@ export class DeviceListComponent implements OnInit, OnDestroy {
 				this.showAlert = true;
 			},
 			error: response => {
-				this.alertDialogService.openAlertModal(response.error.message);
+				this.alertDialogService
+					.openAlertModal(response.error.message)
+					.onHide.asObservable()
+					.subscribe(() => this.searchService.clearField());
 				this.searchModelo = '';
 			}
 		};

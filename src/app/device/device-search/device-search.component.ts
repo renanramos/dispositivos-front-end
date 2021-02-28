@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { SearchService } from '../shared/service/search-service/search-service.service';
 
 @Component({
@@ -8,10 +9,19 @@ import { SearchService } from '../shared/service/search-service/search-service.s
 })
 export class DeviceSearchComponent implements OnInit {
 	searchModelo = '';
+	searchSubscription: Subscription;
 
 	constructor(private searchService: SearchService) {}
 
-	ngOnInit() {}
+	ngOnInit() {
+		this.subscribeToSearchService();
+	}
+
+	subscribeToSearchService() {
+		this.searchSubscription = this.searchService
+			.getSearchCleared()
+			.subscribe(value => (this.searchModelo = ''));
+	}
 
 	onSearchDevice() {
 		this.searchService.searchedValue(this.searchModelo);
