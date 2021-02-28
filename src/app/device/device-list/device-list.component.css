@@ -27,3 +27,8 @@ table tr:hover i{
     cursor: pointer;
     color: blue;
 }
+
+.no-devices-found {
+    font-size: 1.2em;
+    font-weight: 600;
+}
